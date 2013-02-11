@@ -136,7 +136,7 @@ var Sessions = {
 		if (Sessions.list[sid].room !== null)
 			Rooms.kick_player(sid)
 
-		delete this.list[id]
+		delete this.list[sid]
 	},
 
 	remove_inactive: function()
