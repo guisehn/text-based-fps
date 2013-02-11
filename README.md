@@ -16,4 +16,4 @@ Clone/download text-based-fps from [github](https://github.com/ghsehn/text-based
 
 You will need to have [node.js](http://nodejs.org/) installed. You can optionally use [nodejitsu/forever](https://github.com/nodejitsu/forever) CLI tool to maintain the server online even when you close the SSH session. 
 
-There's a running example [here](http://69.55.60.188:1337/).
+There's a running example [here](http://fps.guisehn.com/).
