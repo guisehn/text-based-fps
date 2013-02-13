@@ -49,7 +49,7 @@ var Sessions = {
 		}
 
 		var id = this.generate_id()
-		this.list[id] = {'name': name, 'updated': this.curr_timestamp(), 'room': null, 'lastSuccessfulUpdate': this.curr_timestamp()}
+		this.list[id] = {'name': name, 'updated': this.curr_timestamp(), 'room': null, 'lastSuccessfulUpdate': 0}
 		return id
 	},
 
