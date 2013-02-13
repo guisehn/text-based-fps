@@ -793,7 +793,12 @@ var send_command = function(req, res)
 	{
 		var name
 
-		if (cmd == '')
+		if (typeof(cookies.sid) === 'string' && cookies.sid.length > 0)
+		{
+			res.writeHead(200, [['Content-Type', 'text/plain'], ['Set-Cookie', 'sid='], ['Set-Cookie', 'in_room=0'], ['Set-Cookie', 'lih=0']])
+			res.end(Messages.colorize('red', 'It appears you\'ve been kicked for inactivity. Please type your name again.'))
+		}
+		else if (cmd == '')
 		{
 			res.writeHead(200, {'Content-Type': 'text/plain', 'Set-Cookie': 'in_room=0'})
 			res.end('Type your name')
