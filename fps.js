@@ -676,7 +676,7 @@ var Rooms = {
 		}
 		else
 		{
-			delete room
+			delete Rooms.data[Sessions.list[sid].room]
 		}
 	}
 }
