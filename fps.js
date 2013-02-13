@@ -49,7 +49,7 @@ var Sessions = {
 		}
 
 		var id = this.generate_id()
-		this.list[id] = {'name': name, 'updated': this.curr_timestamp(), 'room': null}
+		this.list[id] = {'name': name, 'updated': this.curr_timestamp(), 'room': null, 'lastSuccessfulUpdate': this.curr_timestamp()}
 		return id
 	},
 
@@ -867,6 +867,17 @@ var send_command = function(req, res)
 	// Commands that the player can use even if it's dead
 	if (cmd.match(/^rename .{1,39}$/))
 	{
+		// Anti-flood
+		var t = Sessions.curr_timestamp()
+
+		if ((t - sess.lastSuccessfulUpdate) < 10)
+		{
+			res.end(Messages.colorize('red', 'Don\'t spam me, bro!'))
+			return
+		}
+
+		sess.lastSuccessfulUpdate = t;
+
 		var change = Sessions.change_name(cookies.sid, cmd.trim().split(' ').slice(1).join(' '))
 		res.end(change !== false ? 'Name changed to ' + change : 'There is another user with that name currently playing')
 		return
