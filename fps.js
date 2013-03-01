@@ -152,17 +152,6 @@ Player.prototype.join_room = function(room_name)
 	if (typeof(Server.rooms[room_name]) !== 'object')
 	{
 		this.room = Server.rooms[room_name] = new Room(room_name)
-
-		var y_len = Server.map.length
-		var x_len = Server.map[0].length
-
-		for (var y = 0; y < y_len; y++)
-		{
-			this.room.coordinates[y] = []
-
-			for (var x = 0; x < x_len; x++)
-				this.room.coordinates[y][x] = null
-		}
 	}
 	else
 	{
@@ -489,6 +478,18 @@ function Room(name)
 	this.players = {}
 	this.coordinates = []
 	this.messages = []
+
+	// Populate coordinates array
+	var y_len = Server.map.length
+	var x_len = Server.map[0].length
+
+	for (var y = 0; y < y_len; y++)
+	{
+		this.coordinates[y] = []
+
+		for (var x = 0; x < x_len; x++)
+			this.coordinates[y][x] = null
+	}
 }
 
 Room.prototype.add_player = function(player)
