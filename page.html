@@ -195,6 +195,7 @@
 					url: '/send',
 					dataType: 'text',
 					data: {'cmd': val},
+					cache: false,
 					success: function(response)
 					{
 						if (response != '')
@@ -256,6 +257,7 @@
 					url: '/receive',
 					dataType: 'text',
 					data: {'last': FPS.cookies.lih},
+					cache: false,
 					success: function(data)
 					{
 						data = $.trim(data).split('\n')
