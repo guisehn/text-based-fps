@@ -716,6 +716,8 @@ var receive_messages = function(req, res)
 	var last = (typeof(params.last) === 'string' && params.last.match(/^[0-9]+$/) && parseInt(params.last) > 0) ? parseInt(params.last) : 0
 	var msg = []
 
+	player.touch()
+
 	if (last > player.room.messages.length)
 	{
 		res.writeHead(401, {'Content-Type': 'text/plain'})
@@ -812,6 +814,7 @@ var send_command = function(req, res)
 	}
 
 	var player = Server.players[cookies.sid]
+	player.touch()
 
 	// Check if the user is in game
 	if (player.room === null)
