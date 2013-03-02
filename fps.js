@@ -269,7 +269,7 @@ Player.prototype.turn = function(direction)
 Player.prototype.turn_around = function()
 {
 	var opposite = {N: 'S', S: 'N', E: 'W', W: 'E'}
-	this.turn(opposite[Rooms.data[Sessions.list[cookies.sid].room].players[cookies.sid].direction])
+	this.turn(opposite[this.direction])
 }
 
 Player.prototype.move = function(direction)
