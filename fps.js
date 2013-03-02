@@ -211,7 +211,7 @@ Player.prototype.fire = function()
 
 	if (this.available_ammo <= 0)
 	{
-		result.ammo = (player.total_ammo <= 0) ? 'out' : 'reload' 
+		result.ammo = (this.total_ammo <= 0) ? 'out' : 'reload' 
 		return result
 	}
 
