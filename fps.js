@@ -13,7 +13,7 @@ var	http = require('http'),
  * Game settings
  */
 var Settings = {
-	port: 1337,
+	port: process.env.PORT || 3000,
 	gun_max_available_ammo: 8,
 	gun_max_ammo: 24,
 	renaming_interval_limit: 10,
