@@ -1,0 +1,6 @@
+{
+  "name": "Text-based FPS",
+  "description": "move east, turn north, fire!!1",
+  "repository": "https://github.com/guisehn/text-based-fps",
+  "keywords": ["node", "express", "socketio", "fps", "game"]
+}
