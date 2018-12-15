@@ -13,6 +13,8 @@ You can find the old version made in 2013 here on the [`old` branch](https://git
 
 There's an instance of the game [running here](https://text-based-fps.herokuapp.com/).
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/guisehn/text-based-fps)
+
 ## Editing the map
 
 The game map is generated from the plain text file `map.txt` where:
