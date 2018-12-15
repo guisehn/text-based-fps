@@ -1,1 +1,1 @@
-web: node fps.js
+web: node index.js

@@ -1,19 +1,26 @@
-Text-based FPS
-==============
-Text-based FPS node.js experiment made by [Guilherme Sehn](http://www.guisehn.com/). This is a free-time project, so it may have some bugs. =P
+# Text-based FPS
+
+Text-based FPS node.js experiment made by [Guilherme Sehn](http://www.guisehn.com/) using socket.io. 
 
 [Original game](http://eigen.pri.ee/shooter/) and map made by [Eigen Lenk](http://eigen.pri.ee/).
 
-Structure
----------
-- `fps.js`: the server-side javascript file which contains the game logic
-- `page.html`: contains all the client-side code
-- `map.txt`: the game map
+You can find the old version made in 2013 here on the [`old` branch](https://github.com/guisehn/text-based-fps/tree/old).
 
-How to run
-----------
-Clone/download text-based-fps from [github](https://github.com/ghsehn/text-based-fps), then run `node fps.js` to start the server.
+## How to install
 
-You will need to have [node.js](http://nodejs.org/) installed. You can optionally use [nodejitsu/forever](https://github.com/nodejitsu/forever) CLI tool to maintain the server online even when you close the SSH session. 
+- `yarn install`
+- `node index.js`
 
-There's a running example [here](https://text-based-fps.herokuapp.com/).
+There's an instance of the game [running here](https://text-based-fps.herokuapp.com/).
+
+## Editing the map
+
+The game map is generated from the plain text file `map.txt` where:
+
+- `#` represent the walls
+- `N`, `S`, `W`, `E` represent the respawn positions where the letters mean the player initial direction (north, south, west or east)
+
+The engine automatically ignores empty lines at the start and end of the map, and also empty spaces after the last wall of the line. You can add a `.` character to circumvent that if you really mean to have those empty spaces.
+
+## Running tests
+`yarn test`
