@@ -1,15 +1,39 @@
 {
   "name": "text-based-fps",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "fps.js",
   "scripts": {
-    "start": "node fps.js"
+    "test": "mocha --recursive"
   },
   "engines": {
-    "node": "0.10.22"
+    "node": "^8.10.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/guisehn/text-based-fps"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "pluralize": "^7.0.0",
+    "sinon": "^7.2.2",
+    "socket.io": "^2.2.0",
+    "tty-table": "^2.6.9",
+    "uuid": "^3.3.2"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "context",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach",
+      "it",
+      "expect"
+    ]
   }
 }
