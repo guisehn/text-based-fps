@@ -20,7 +20,7 @@
     "moment": "^2.22.2",
     "pluralize": "^7.0.0",
     "sinon": "^7.2.2",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "tty-table": "^2.6.9",
     "uuid": "^3.3.2"
   },
