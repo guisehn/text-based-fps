@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "chai": "^4.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "lodash": "^4.17.13",
     "mocha": "^5.2.0",
     "moment": "^2.22.2",
